@@ -26,7 +26,7 @@ describe("validations tests suites - longerThan8", () => {
     });
 
     test("Should return true if gamertag has a special character", () => {
-        const result = gamertagValid("validGamertag");
+        const result = gamertagValid("validGamertag@");
         expect(result).toBe(true);
     });
 });
