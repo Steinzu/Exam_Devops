@@ -2,7 +2,11 @@
 
 // verify if gamerta is longer than 8 characters
 const gamertagValid = (label) => {
-  return false;
+    if (label.length > 8) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 exports.gamertagValid = gamertagValid;
