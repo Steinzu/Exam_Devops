@@ -21,11 +21,16 @@ describe("validations tests suites - isEmpty", () => {
 
 describe("validations tests suites - longerThan8", () => {
     test("Should return true if gamertag is longer than 8", () => {
-        const result = gamertagValid("validGamertag@");
+        const result = gamertagValid("validGamertag@1");
         expect(result).toBe(true);
     });
 
     test("Should return true if gamertag has a special character", () => {
+        const result = gamertagValid("validGamertag@1");
+        expect(result).toBe(true);
+    });
+
+    test("Should return true if gamertag has a number", () => {
         const result = gamertagValid("validGamertag@");
         expect(result).toBe(true);
     });
