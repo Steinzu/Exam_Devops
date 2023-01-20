@@ -2,11 +2,12 @@
 
 // verify if gamerta is longer than 8 characters
 const gamertagValid = (label) => {
-    if (label.length > 8) {
+    // if label is longer than 8 characters and has at least 1 special characters
+    if (label.length > 8 && label.match(/[^a-zA-Z0-9]/)) {
         return true;
-    } else {
-        return false;
     }
+    return false;
+
 };
 
 exports.gamertagValid = gamertagValid;
